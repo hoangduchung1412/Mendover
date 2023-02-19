@@ -1,0 +1,67 @@
+@media all and (max-width: 768px) {
+	header {
+		flex-direction: column;
+	}
+	.menu ul {
+		flex-direction: column;
+	}
+	#toggle {
+		/*hien thi khoi toggle*/
+		display: block;
+	}
+	/*an the menu*/
+	.menu {
+		display: none;
+	}
+	.menu > ul > li {
+		margin: 20px;
+		position: relative;
+	}
+	.menu > ul li > ul li > ul{
+	    margin-left: 100px;
+	    margin-top: -30px;
+	}
+	.logo {
+		padding: 37px 0px;
+		margin: auto;
+	}
+	.product {
+		text-align: center;	
+	}
+}
+@media (max-width: 991px) {
+	.res-menu {
+		display: block;
+		position: relative;  
+		z-index: 99;  
+	}
+	.menu {
+		display: none; 
+		position: fixed; 
+		width: 100%;  
+		height: 100%;  
+		background: #fff; 
+		z-index: 99; 
+		top: 0 ; 
+		left: 0 ; 
+		animation: menuShow .4s ease-out 1; 
+	}
+	.menu.noactive{
+		animation: menuHide .3s ease-out 1;
+	}
+	.menu.active{
+		display: block; 
+	}
+	.menu ul{
+		display: block;
+	}
+	.menu ul li{
+		width: 100%;  
+		text-align: center;  
+		margin: 24px 0;
+	}
+	.menu ul li:before {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
